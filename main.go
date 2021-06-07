@@ -86,7 +86,7 @@ func ExecTransaction(db *Mydb,handle func(tx *sql.Tx)error)error{
 }
 func main(){
 	//连接数据库
-	mydb,_:=getConn("root:Dyf5201314@tcp(127.0.0.1:3306)/students?charset=utf8")
+	mydb,_:=getConn("root:password@tcp(127.0.0.1:3306)/students?charset=utf8")
 	//例1: 普通查询
 	rows,_:=mydb.DB.Query("select * from info_stu")
 	for rows.Next() {
